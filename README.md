@@ -1,34 +1,104 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Issues](https://img.shields.io/badge/Issues-0-red.svg)](https://github.com/marcelo-schreiber/CWB-COVID-API/issues)
+
+[README em português](https://github.com/marcelo-schreiber/CWB-COVID-API/blob/master/readme.pt.md)
+
+<br />
+<p align="center">
+  <a href="https://cwb-covid.netlify.app/" target="_blank" rel="noreferrer">
+    <img src="https://cdn.discordapp.com/attachments/685226653764550671/789647227165343754/logo512.png" alt="Logo" width="220px">
+  </a>
+
+  <p align="center">
+    An API with COVID-19 data from Curitiba.
+    <br />
+    <a href="https://cwb-covid.netlify.app/" target="_blank" rel="noreferrer"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="#getting-started">View instructions</a>
+    ·
+    <a href="https://github.com/marcelo-schreiber/CWB-COVID-API/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/marcelo-schreiber/CWB-COVID-API/issues">Request Feature</a>
+  </p>
+</p>
+
+
+<details open="open">
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+    </li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
+
+<!-- ABOUT THE PROJECT -->
+## About The Project
+
+There are many COVID-19 APIs, however, none of them hand detailed data, in a open-source way, from my city (Curitiba A.K.A cwb).
+
+Why?
+
+* Curitiba citizens must know how this disease is being handled over time.
+
+* The time for creating apps or websites about this subject can be highly demanding. This project can save a lot of that work.
+
+Needless to say, this API is very focused on my local region. So you may also suggest changes by forking this repo and creating a pull request or opening an issue.
+
+<!-- BUILT WITH -->
+### Built With
+
+Server
+* [Express](https://expressjs.com/)
+* [Postgres](https://www.postgresql.org/)
+* [Typescript](https://www.typescriptlang.org/)
+
+Scraper
+* [Python](https://www.python.org/)
+* [Selenium](https://www.selenium.dev/)
+
+Website with instructions
+* [React](https://reactjs.org/)
+* [Typescript](https://www.typescriptlang.org/)
+* [Styled components](https://styled-components.com/)
+
+<!-- GETTING STARTED -->
 ## Getting Started
 
-First, run the development server:
+There are three folders: a scraper (data gathering), a server (data display) and a instructions-website (website telling how to use the API)
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+Each folder has a README explaining how to install and run in your computer.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Contributing
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## License
 
-## Learn More
+Distributed under the MIT License. See `LICENSE` for more information.
 
-To learn more about Next.js, take a look at the following resources:
+## Contact
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Discord: Losaeg#1619 
+- Email: marcelorissette15@gmail.com
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Project Link: [https://github.com/marcelo-schreiber/CWB-COVID-API](https://github.com/marcelo-schreiber/CWB-COVID-API)
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+##### Made with <3 by Marcelo Schreiber
