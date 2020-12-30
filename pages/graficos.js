@@ -19,7 +19,7 @@ import { GraphsContainer, MainTitle, Selection, HeaderContainer } from "../style
 
 import { FaAngleLeft } from "react-icons/fa";
 
-function Graphs({ all, week, month }) {
+function Graphs({ all, week, month, last }) {
   const [filter, setFilter] = useState("Todas");
   const [xDimension, setXDimension] = useState(0);
 
@@ -62,7 +62,7 @@ function Graphs({ all, week, month }) {
         />
       </Link>
       <HeaderContainer>
-        <MainTitle>Estatísticas de Curitiba</MainTitle>
+        <MainTitle>Curitiba | Bandeira {last.flag} </MainTitle>
         <Selection onChange={e => setFilter(e.target.value)} value={filter}>
           <option>Todas</option>
           <option>Última semana</option>
@@ -141,9 +141,12 @@ export async function getStaticProps() {
     `https://cwb-covid.herokuapp.com/api/filter?offset=0&limit=30`
   );
 
+  const last = await fetch(`https://cwb-covid.herokuapp.com/api/last`);
+
   const allJson = await all.json();
   const weekJson = await week.json();
   const monthJson = await month.json();
+  const lastJson = await last.json();
 
   return {
     // * reverse so the most recent data is at the most right
@@ -151,6 +154,7 @@ export async function getStaticProps() {
       all: allJson.reverse(),
       week: weekJson.reverse(),
       month: monthJson.reverse(),
+      last: lastJson,
     }, // will be passed to the page component as props
     revalidate: 7200,
   };
