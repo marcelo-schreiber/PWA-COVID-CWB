@@ -1,6 +1,6 @@
 {
-  "short_name": "CWB COVID API",
-  "name": "Curitiba COVID-19 API",
+  "short_name": "CWB COVID METER",
+  "name": "Curitiba COVID-19 Meter",
   "icons": [
     {
       "src": "favicon.ico",
@@ -18,8 +18,9 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
-  "theme_color": "#721AB7",
-  "background_color": "#212121"
+  "theme_color": "#FD7E40",
+  "background_color": "#3638AD"
 }
