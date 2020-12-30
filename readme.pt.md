@@ -1,8 +1,8 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Issues](https://img.shields.io/badge/Issues-0-red.svg)](https://github.com/marcelo-schreiber/CWB-COVID-API/issues)
+[![Issues](https://img.shields.io/badge/Issues-0-red.svg)](https://github.com/marcelo-schreiber/Usage-CWB-covid-api/issues)
 
-[README em português](readme.pt.md)
+[README em inglês](readme.pt)
 
 <br />
 <p align="center">
