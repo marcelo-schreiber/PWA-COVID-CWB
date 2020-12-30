@@ -26,7 +26,7 @@ function Home() {
           </Link>
         </div>
         <Image
-          src="/landing.png"
+          src="/Landing.png"
           alt="landing"
           width={770}
           height={803}
