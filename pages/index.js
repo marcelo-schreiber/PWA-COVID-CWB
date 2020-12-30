@@ -25,7 +25,13 @@ function Home() {
             <Button>Explorar</Button>
           </Link>
         </div>
-        <Image src="/landing.png" alt="landing" width="770px" height="803px" />
+        <Image
+          src="/landing.png"
+          alt="landing"
+          width={770}
+          height={803}
+          priority={true}
+        />
       </LandingContainer>
     </Layout>
   );
