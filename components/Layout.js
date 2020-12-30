@@ -3,7 +3,7 @@ import Head from "next/head";
 
 function Layout({ title, children }) {
   return (
-    <>
+    <html lang="pt-br">
       <Head>
         <title>{title} | Cwb Covid Meter</title>
         <link rel="icon" href="/favicon.ico" />
@@ -16,10 +16,7 @@ function Layout({ title, children }) {
         />
 
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        <meta
-          name="viewport"
-          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1"
-        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="Veja como Curitiba lida com o corona vírus." />
         <meta
           name="keywords"
@@ -29,12 +26,11 @@ function Layout({ title, children }) {
         <link rel="manifest" href="/manifest.json" />
         <link href="/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16" />
         <link href="/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32" />
-        <link rel="apple-touch-icon" href="/apple-icon.png" />
         <meta name="theme-color" content="#3638AD" />
       </Head>
 
       <main>{children}</main>
-    </>
+    </html>
   );
 }
 
