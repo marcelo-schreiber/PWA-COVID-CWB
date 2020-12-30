@@ -2,31 +2,29 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Issues](https://img.shields.io/badge/Issues-0-red.svg)](https://github.com/marcelo-schreiber/CWB-COVID-API/issues)
 
-[README in english](https://github.com/marcelo-schreiber/CWB-COVID-API/blob/master/readme.md)
+[README em português](readme.pt.md)
 
 <br />
 <p align="center">
-  <a href="https://cwb-covid.netlify.app/" target="_blank" rel="noreferrer">
+  <a href="https://cwb-covid.vercel.app/" target="_blank" rel="noreferrer">
     <img src="https://cdn.discordapp.com/attachments/685226653764550671/789647227165343754/logo512.png" alt="Logo" width="220px">
   </a>
 
   <p align="center">
-    Uma API de COVID-19 curitibana.
-    <br />
-    <a href="https://cwb-covid.netlify.app/" target="_blank" rel="noreferrer"><strong>Explore a documentação »</strong></a>
+    Um website com dados de Curitiba usando <a href="https://github.com/marcelo-schreiber/CWB-COVID-API" target="_blank" rel="noreferrer"> minha API</a>.
     <br />
     <br />
     <a href="#getting-started">Veja instruções</a>
     ·
-    <a href="https://github.com/marcelo-schreiber/CWB-COVID-API/issues">Relate um erro</a>
+    <a href="https://github.com/marcelo-schreiber/Usage-CWB-covid-api/issues">Relate um erro</a>
     ·
-    <a href="https://github.com/marcelo-schreiber/CWB-COVID-API/issues">Solicitar recurso</a>
+    <a href="https://github.com/marcelo-schreiber/Usage-CWB-covid-api/issues">Solicitar recurso</a>
   </p>
 </p>
 
 
 <details open="open">
-  <summary>Tabela de conteúdo</summary>
+  <summary>Tabela de conteúdos</summary>
   <ol>
     <li>
       <a href="#about-the-project">Sobre o projeto</a>
@@ -46,62 +44,53 @@
 <!-- ABOUT THE PROJECT -->
 ## Sobre o projeto
 
-Existem muitas Api com esse assunto, mas, nenhuma contém dados detalhados, código aberto e da minha cidade (Curitiba ou cwb).
+- Este projeto é somente um exemplo de como utilizar a API citada acima. Tenha certeza de checar ela.
 
-Por quê?
+Por que NextJs?
 
-* Cidadãos curitibanos devem saber como essa doença está sendo tratada com o tempo. 
+- O static props (propriedades estáticas) pode deixar o carregamento, aproximadamente, 5 segundos mais rápida, já que o hosting gratuito da heroku (hosting da minha API) tem um 'cold start' (primeira requisição é mais lenta).
 
-* O tempo para criar aplicativos e sites sobre o corona vírus pode ser bem rigoroso. Mas, esse projeto pode salvar um pouco desse processo.
+- Otimização de imagens.
 
-Needless to say, this API is very focused on my local region. So you may also suggest changes by forking this repo and creating a pull request or opening an issue.
+- Paginação mais simples.
 
-É claro que essa API tem um foco em minha região. Então, você pode sugerir alterações dando um 'fork' e criando um PR ou abrindo um erro em 'issues'.
+É claro que essa API e o website tem um foco em minha região. Então, você pode sugerir alterações dando um 'fork' e criando um PR ou abrindo um erro em 'issues'.
 
+<!-- BUILT WITH -->
 ### Tecnologias
 
-Server
-* [Express](https://expressjs.com/)
-* [Postgres](https://www.postgresql.org/)
-* [Typescript](https://www.typescriptlang.org/)
-
-Scraper
-* [Python](https://www.python.org/)
-* [Selenium](https://www.selenium.dev/)
-
-Website with instructions
-* [React](https://reactjs.org/)
-* [Typescript](https://www.typescriptlang.org/)
-* [Styled components](https://styled-components.com/)
+* [NextJs](https://nextjs.org/)
+* [Styled Components](https://styled-components.com/)
+* [React Chart for Material-Ui](https://devexpress.github.io/devextreme-reactive/react/chart/)
 
 <!-- GETTING STARTED -->
 ## Começando
 
-Existem três pastas: scraper (recolhimento de dados), server (mostrar dados) e instructions-website (site sobre como utilizar a API).
+Para funcionar na sua máquina você deve instalar <a href="https://yarnpkg.com/" target="_blank" rel="noreferrer">Yarn</a> e <a href="https://nodejs.org" target="_blank" rel="noreferrer">NodeJs</a>.
 
-Cada pasta possui um README explicando como instalar e operar na sua máquina.
+## Instalation
 
-## Contribuindo
+Clone o projeto e execute `yarn && yarn dev` no diretório principal.
 
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+- Seu computador deve estar hosteando um exemplo em <a href="http://localhost:3000">http://localhost:3000</a>
 
-Contribuições são o que faz a comunidade open source ser incrível como ela é. Qualquer contribuição que você faz são **muito bem-vindas**.
+## Contributing
+
+Contribuições são o que faz a comunidade open source ser incrível como ela é. Qualquer contribuição que você faz são muito bem-vindas.
 
 1. Fork o Projeto
-2. Crie uma branch (`git checkout -b feature/featureIncrivel`)
-3. Commit suas alterações (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a Branch (`git push origin feature/AmazingFeature`)
+2. Crie uma branch (git checkout -b feature/featureIncrivel)
+3. Commit suas alterações (git commit -m 'Add: featureIncrivel')
+4. Push para a Branch (git push origin feature/featureIncrivel)
 5. Faça um Pull Request
 
 ## Licença
 
-Distribuido sobre a Licença MIT. Veja `LICENSE` para mais informações.
+Distribuido sobre a Licença `MIT`. Veja LICENSE para mais informações.
 
 ## Contato
 
 - Discord: Losaeg#1619 
 - Email: marcelorissette15@gmail.com
-
-Link do projeto: [https://github.com/marcelo-schreiber/CWB-COVID-API](https://github.com/marcelo-schreiber/CWB-COVID-API)
 
 ##### Feito com <3 por Marcelo Schreiber

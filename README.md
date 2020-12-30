@@ -2,25 +2,23 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Issues](https://img.shields.io/badge/Issues-0-red.svg)](https://github.com/marcelo-schreiber/CWB-COVID-API/issues)
 
-[README em português](https://github.com/marcelo-schreiber/CWB-COVID-API/blob/master/readme.pt.md)
+[README em português](readme.pt.md)
 
 <br />
 <p align="center">
-  <a href="https://cwb-covid.netlify.app/" target="_blank" rel="noreferrer">
+  <a href="https://cwb-covid.vercel.app/" target="_blank" rel="noreferrer">
     <img src="https://cdn.discordapp.com/attachments/685226653764550671/789647227165343754/logo512.png" alt="Logo" width="220px">
   </a>
 
   <p align="center">
-    An API with COVID-19 data from Curitiba.
-    <br />
-    <a href="https://cwb-covid.netlify.app/" target="_blank" rel="noreferrer"><strong>Explore the docs »</strong></a>
+    An website with COVID-19 data from Curitiba using <a href="https://github.com/marcelo-schreiber/CWB-COVID-API" target="_blank" rel="noreferrer"> my own API</a>.
     <br />
     <br />
     <a href="#getting-started">View instructions</a>
     ·
-    <a href="https://github.com/marcelo-schreiber/CWB-COVID-API/issues">Report Bug</a>
+    <a href="https://github.com/marcelo-schreiber/Usage-CWB-covid-api/issues">Report Bug</a>
     ·
-    <a href="https://github.com/marcelo-schreiber/CWB-COVID-API/issues">Request Feature</a>
+    <a href="https://github.com/marcelo-schreiber/Usage-CWB-covid-api/issues">Request Feature</a>
   </p>
 </p>
 
@@ -46,39 +44,35 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-There are many COVID-19 APIs, however, none of them hand detailed data, in a open-source way, from my city (Curitiba A.K.A cwb).
+- This is just a project prototype for the usage of my API linked above. Make sure to check it out.
 
-Why?
+Why NextJs?
 
-* Curitiba citizens must know how this disease is being handled over time.
+- The static props can make the loadings roughly 5 seconds faster, since the free hosting of heroku has a cold start.
 
-* The time for creating apps or websites about this subject can be highly demanding. This project can save a lot of that work.
+- Image optimization.
 
-Needless to say, this API is very focused on my local region. So you may also suggest changes by forking this repo and creating a pull request or opening an issue.
+- Easier pagination.
+
+Also, the API and the website are very focused on my local region. So you can suggest changes by forking this repo and creating a pull request or opening an issue.
 
 <!-- BUILT WITH -->
 ### Built With
 
-Server
-* [Express](https://expressjs.com/)
-* [Postgres](https://www.postgresql.org/)
-* [Typescript](https://www.typescriptlang.org/)
-
-Scraper
-* [Python](https://www.python.org/)
-* [Selenium](https://www.selenium.dev/)
-
-Website with instructions
-* [React](https://reactjs.org/)
-* [Typescript](https://www.typescriptlang.org/)
-* [Styled components](https://styled-components.com/)
+* [NextJs](https://nextjs.org/)
+* [Styled Components](https://styled-components.com/)
+* [React Chart for Material-Ui](https://devexpress.github.io/devextreme-reactive/react/chart/)
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-There are three folders: a scraper (data gathering), a server (data display) and a instructions-website (website telling how to use the API)
+To run in your machine, make sure to have <a href="https://yarnpkg.com/" target="_blank" rel="noreferrer">Yarn</a> and <a href="https://nodejs.org" target="_blank" rel="noreferrer">NodeJs</a> installed.
 
-Each folder has a README explaining how to install and run in your computer.
+## Instalation
+
+Clone the project and run `yarn && yarn dev` at the folder.
+
+- Your computer should be hosting an example at <a href="http://localhost:3000">http://localhost:3000</a>
 
 ## Contributing
 
@@ -99,6 +93,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 - Discord: Losaeg#1619 
 - Email: marcelorissette15@gmail.com
 
-Project Link: [https://github.com/marcelo-schreiber/CWB-COVID-API](https://github.com/marcelo-schreiber/CWB-COVID-API)
 
 ##### Made with <3 by Marcelo Schreiber
