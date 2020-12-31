@@ -59,6 +59,7 @@ Por que NextJs?
 <!-- BUILT WITH -->
 ### Tecnologias
 
+* [Figma](https://www.figma.com/file/PmuSxLBoSK0VdLJ6TwecSB/cwb-covid-meter)
 * [NextJs](https://nextjs.org/)
 * [Styled Components](https://styled-components.com/)
 * [React Chart for Material-Ui](https://devexpress.github.io/devextreme-reactive/react/chart/)
