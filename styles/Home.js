@@ -64,6 +64,36 @@ export const Button = styled.button`
   }
 `;
 
+export const InstallButton = styled.button`
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  background: #fd7e40;
+  border-radius: 15px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2rem;
+
+  letter-spacing: 0.1em;
+
+  border: none;
+
+  padding: 0.6rem 1.75rem;
+
+  color: #fafafafa;
+
+  transition: 0.2s ease-in-out;
+
+  cursor: pointer;
+
+  margin-left: 3.5rem;
+
+  :hover {
+    background-color: #ca6533;
+    transform: scale(1.05);
+  }
+`;
+
 export const LandingContainer = styled.section`
   display: flex;
   align-items: center;
