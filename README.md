@@ -68,7 +68,7 @@ Also, the API and the website are very focused on my local region. So you can su
 
 To run in your machine, make sure to have <a href="https://yarnpkg.com/" target="_blank" rel="noreferrer">Yarn</a> and <a href="https://nodejs.org" target="_blank" rel="noreferrer">NodeJs</a> installed.
 
-## Instalation
+## Installation
 
 Clone the project and run `yarn && yarn dev` at the folder.
 
