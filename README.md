@@ -11,7 +11,7 @@
   </a>
 
   <p align="center">
-    An website with COVID-19 data from Curitiba using <a href="https://github.com/marcelo-schreiber/CWB-COVID-API" target="_blank" rel="noreferrer"> my own API</a>.
+    A PWA (Progressive Web App) with COVID-19 data from Curitiba using <a href="https://github.com/marcelo-schreiber/CWB-COVID-API" target="_blank" rel="noreferrer"> my own API</a>.
     <br />
     <br />
     <a href="#getting-started">View instructions</a>
