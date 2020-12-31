@@ -21,7 +21,7 @@ import { FaAngleLeft } from "react-icons/fa";
 
 function Graphs({ all, week, month, last }) {
   const [filter, setFilter] = useState("Todas");
-  const [xDimension, setXDimension] = useState(0);
+  const [xDimension, setXDimension] = useState(window.innerWidth);
 
   let data;
 
