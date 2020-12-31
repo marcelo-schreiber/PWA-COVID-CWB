@@ -13,7 +13,6 @@ function Home() {
     <Layout title="Home">
       <Header>
         <TitleLogo>Cwb Covid Meter</TitleLogo>
-        <button onClick={e => handleClick(e)}>Instlal</button>
         <a href="https://github.com/marcelo-schreiber" target="_blank" rel="noreferrer">
           <FaGithub size={64} color="#FFF" style={{ cursor: "pointer" }} />
         </a>
