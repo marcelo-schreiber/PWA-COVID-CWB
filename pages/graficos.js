@@ -21,7 +21,7 @@ import { FaAngleLeft } from "react-icons/fa";
 
 function Graphs({ all, week, month, last }) {
   const [filter, setFilter] = useState("Todas");
-  const [xDimension, setXDimension] = useState(window.innerWidth);
+  const [xDimension, setXDimension] = useState(0);
 
   let data;
 
@@ -45,6 +45,8 @@ function Graphs({ all, week, month, last }) {
   };
 
   useEffect(() => {
+    updateDimension();
+
     window.addEventListener("resize", updateDimension);
 
     return () => {
