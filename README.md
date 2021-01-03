@@ -7,7 +7,7 @@
 <br />
 <p align="center">
   <a href="https://cwb-covid.vercel.app/" target="_blank" rel="noreferrer">
-    <img src="https://cdn.discordapp.com/attachments/685226653764550671/795131919523905556/Home___Cwb_Covid_Meter.gif" alt="content" width="220px">
+    <img src="https://cdn.discordapp.com/attachments/685226653764550671/795131919523905556/Home___Cwb_Covid_Meter.gif" alt="content">
   </a>
 
   <p align="center">
