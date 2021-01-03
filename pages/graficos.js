@@ -6,8 +6,9 @@ import {
   ValueAxis,
   Chart,
   BarSeries,
-  Title,
   LineSeries,
+  PieSeries,
+  Title,
   Legend,
   Tooltip,
 } from "@devexpress/dx-react-chart-material-ui";
@@ -23,7 +24,19 @@ function Graphs({ all, week, month, last }) {
   const [filter, setFilter] = useState("Todas");
   const [xDimension, setXDimension] = useState(0);
 
-  let data;
+  let data = all;
+
+  const totalHospitalOcupation = [
+    {
+      name: "Leitos ocupados",
+      ocup: parseInt(last.hospital_ocupation.replace("%", "")),
+    },
+    {
+      name: "Leitos livres",
+      ocup: 100 - parseInt(last.hospital_ocupation.replace("%", "")),
+    },
+    ,
+  ];
 
   switch (filter) {
     case "Todas":
@@ -129,6 +142,22 @@ function Graphs({ all, week, month, last }) {
             <HoverState />
 
             <Animation duration={1500} />
+          </Chart>
+        </Paper>
+        <Paper elevation={4} style={{ width: "60%", margin: "8.5rem 0rem" }}>
+          <Chart data={totalHospitalOcupation}>
+            <PieSeries valueField="ocup" argumentField="name" />
+
+            <Title text="Ocupação dos leitos (SUS)" />
+
+            <EventTracker />
+            <HoverState />
+
+            <Tooltip
+              contentComponent={props => <Tooltip.Content text={`${props.text}%`} />}
+            />
+
+            <Animation duration={2500} />
           </Chart>
         </Paper>
       </GraphsContainer>
