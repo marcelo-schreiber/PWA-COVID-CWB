@@ -46,7 +46,7 @@
 
 - Este projeto é somente um exemplo de como utilizar a API citada acima. Tenha certeza de checar ela.
 
-Por que NextJs?
+### Por que NextJs?
 
 - O static props (propriedades estáticas) pode deixar o carregamento, aproximadamente, 5 segundos mais rápida, já que o hosting gratuito da heroku (hosting da minha API) tem um 'cold start' (primeira requisição é mais lenta).
 
