@@ -44,7 +44,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-- This is just a project prototype for the usage <a href="https://github.com/marcelo-schreiber/CWB-COVID-API" target="_blank" rel="noreferrer"> my API</a>.. Make sure to check it out!
+- This is just a project prototype for the usage <a href="https://github.com/marcelo-schreiber/CWB-COVID-API" target="_blank" rel="noreferrer"> my API</a>. Make sure to check it out!
 
 
 Why NextJs?
