@@ -28,14 +28,13 @@ function Graphs({ all, week, month, last }) {
 
   const totalHospitalOcupation = [
     {
-      name: "Leitos ocupados",
-      ocup: parseInt(last.hospital_ocupation.replace("%", "")),
-    },
-    {
       name: "Leitos livres",
       ocup: 100 - parseInt(last.hospital_ocupation.replace("%", "")),
     },
-    ,
+    {
+      name: "Leitos ocupados",
+      ocup: parseInt(last.hospital_ocupation.replace("%", "")),
+    },
   ];
 
   switch (filter) {
