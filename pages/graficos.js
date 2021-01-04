@@ -20,7 +20,7 @@ import { GraphsContainer, MainTitle, Selection, HeaderContainer } from "../style
 
 import { FaAngleLeft } from "react-icons/fa";
 
-import { parseDate } from "../utils/parseDate";
+import { parseData } from "../utils/parseData";
 
 function Graphs({ all, week, month, last }) {
   const [filter, setFilter] = useState("Todas");
@@ -28,29 +28,18 @@ function Graphs({ all, week, month, last }) {
 
   let data;
 
-  const totalHospitalOcupation = [
-    {
-      name: "Leitos livres",
-      ocup: 100 - parseInt(last.hospital_ocupation.replace("%", "")),
-    },
-    {
-      name: "Leitos ocupados",
-      ocup: parseInt(last.hospital_ocupation.replace("%", "")),
-    },
-  ];
-
   switch (filter) {
     case "Todas":
-      data = parseDate(all);
+      data = parseData(all);
       break;
     case "Última semana":
-      data = parseDate(week);
+      data = parseData(week);
       break;
     case "Último mês":
-      data = parseDate(month);
+      data = parseData(month);
       break;
     default:
-      data = parseDate(all);
+      data = parseData(all);
       break;
   }
 
@@ -145,9 +134,19 @@ function Graphs({ all, week, month, last }) {
             <Animation duration={1500} />
           </Chart>
         </Paper>
-        <Paper elevation={4} style={{ width: "50%", margin: "8.5rem 0rem" }}>
-          <Chart data={totalHospitalOcupation}>
-            <PieSeries valueField="ocup" argumentField="name" />
+        <Paper elevation={4} style={{ width: "90%", margin: "8.5rem 0rem" }}>
+          <Chart data={data}>
+            <ArgumentAxis showLabels={xDimension > 1000} />
+            <ValueAxis showGrid={true} showTicks={true} />
+
+            <Legend />
+
+            <BarSeries
+              name="Ocupação leitos UTI (%)"
+              valueField="ocupation"
+              argumentField="date"
+              color="#F18685"
+            />
 
             <Title text="Ocupação dos leitos (SUS)" />
 
