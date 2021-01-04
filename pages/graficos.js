@@ -7,7 +7,6 @@ import {
   Chart,
   BarSeries,
   LineSeries,
-  PieSeries,
   Title,
   Legend,
   Tooltip,
