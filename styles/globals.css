@@ -19,15 +19,16 @@ a {
   cursor: pointer;
 }
 
+@media only screen and (max-width: 1050px) {
+  div#center-container {
+    /* overwrite default position of legends in graphs */
+    flex-direction: column !important;
+  }
+}
 
 @media only screen and (max-width: 680px) {
   :root {
     font-size: 50%;
-  }
-
-  div#center-container {
-    /* overwrite default position of legends in graphs */
-    flex-direction: column !important;
   }
 }
 

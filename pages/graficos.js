@@ -16,10 +16,9 @@ import { EventTracker, HoverState, Stack, Animation } from "@devexpress/dx-react
 
 import Layout from "../components/Layout";
 import { GraphsContainer, MainTitle, Selection, HeaderContainer } from "../styles/Graphs";
+import { parseData } from "../utils/parseData";
 
 import { FaAngleLeft } from "react-icons/fa";
-
-import { parseData } from "../utils/parseData";
 
 function Graphs({ all, week, month, last }) {
   const [filter, setFilter] = useState("Todas");
@@ -76,7 +75,7 @@ function Graphs({ all, week, month, last }) {
       <GraphsContainer>
         <Paper elevation={4} style={{ width: "90%", marginBottom: "8.5rem" }}>
           <Chart data={data}>
-            <ArgumentAxis showLabels={xDimension > 1000} />
+            <ArgumentAxis showLabels={xDimension > 830} />
             <ValueAxis showGrid={true} showTicks={true} />
 
             <Legend />
@@ -107,7 +106,7 @@ function Graphs({ all, week, month, last }) {
         </Paper>
         <Paper elevation={4} style={{ width: "90%" }}>
           <Chart data={data}>
-            <ArgumentAxis showLabels={xDimension > 1000} />
+            <ArgumentAxis showLabels={xDimension > 830} />
             <ValueAxis showGrid={true} showTicks={true} />
             <Legend />
 
@@ -135,7 +134,7 @@ function Graphs({ all, week, month, last }) {
         </Paper>
         <Paper elevation={4} style={{ width: "90%", margin: "8.5rem 0rem" }}>
           <Chart data={data}>
-            <ArgumentAxis showLabels={xDimension > 1000} />
+            <ArgumentAxis showLabels={xDimension > 830} />
             <ValueAxis showGrid={true} showTicks={true} />
 
             <Legend />

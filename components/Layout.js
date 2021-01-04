@@ -3,7 +3,7 @@ import Head from "next/head";
 
 function Layout({ title, children }) {
   return (
-    <html lang="pt-br">
+    <>
       <Head>
         <title>{title} | Cwb Covid Meter</title>
         <link rel="icon" href="/favicon.ico" />
@@ -29,7 +29,7 @@ function Layout({ title, children }) {
       </Head>
 
       <main>{children}</main>
-    </html>
+    </>
   );
 }
 
