@@ -69,13 +69,13 @@
 
 Para funcionar na sua máquina você deve instalar <a href="https://yarnpkg.com/" target="_blank" rel="noreferrer">Yarn</a> e <a href="https://nodejs.org" target="_blank" rel="noreferrer">NodeJs</a>.
 
-## Instalation
+## Instalação
 
 Clone o projeto e execute `yarn && yarn dev` no diretório principal.
 
 - Seu computador deve estar hosteando um exemplo em <a href="http://localhost:3000">http://localhost:3000</a>
 
-## Contributing
+## Contribuindo
 
 Contribuições são o que faz a comunidade open source ser incrível como ela é. Qualquer contribuição que você faz são muito bem-vindas.
 
