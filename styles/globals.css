@@ -9,14 +9,25 @@ body {
   background-color: #3638AD;
 }
 
-
 :root {
   font-size: 66.5%;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;  
+  cursor: pointer;
+}
+
+
 @media only screen and (max-width: 680px) {
   :root {
     font-size: 50%;
+  }
+
+  div#center-container {
+    /* overwrite default position of legends in graphs */
+    flex-direction: column !important;
   }
 }
 
@@ -30,11 +41,4 @@ body {
   :root {
     font-size: 40%;
   }
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-  
-  cursor: pointer;
 }
