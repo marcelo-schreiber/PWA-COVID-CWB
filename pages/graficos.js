@@ -116,7 +116,7 @@ function Graphs({ all, week, month, last }) {
               name="Confirmados"
               valueField="total_confirmed"
               argumentField="date"
-              color="#2D56A7"
+              color="#3638AD"
             />
             <LineSeries
               name="Recuperados"
@@ -142,13 +142,13 @@ function Graphs({ all, week, month, last }) {
             <Legend />
 
             <BarSeries
-              name="Ocupação leitos UTI (%)"
+              name="Ocupação leitos (%)"
               valueField="ocupation"
               argumentField="date"
               color="#F18685"
             />
 
-            <Title text="Ocupação dos leitos (SUS)" />
+            <Title text="Ocupação dos leitos UTI (SUS)" />
 
             <EventTracker />
             <HoverState />
