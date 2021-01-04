@@ -2,12 +2,12 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Issues](https://img.shields.io/badge/Issues-0-red.svg)](https://github.com/marcelo-schreiber/Usage-CWB-covid-api/issues)
 
-[README in english](readme.pt)
+[README em inglês](readme.pt)
 
 <br />
 <p align="center">
   <a href="https://cwb-covid.vercel.app/" target="_blank" rel="noreferrer">
-  <img src="https://cdn.discordapp.com/attachments/685226653764550671/795767679679987723/Home___Cwb_Covid_Meter_1.gif" width="640" height="auto" />
+    <img src="https://cdn.discordapp.com/attachments/685226653764550671/795767679679987723/Home___Cwb_Covid_Meter_1.gif" alt="Content">
   </a>
 
   <p align="center">
