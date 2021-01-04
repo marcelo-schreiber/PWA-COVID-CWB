@@ -20,11 +20,13 @@ import { GraphsContainer, MainTitle, Selection, HeaderContainer } from "../style
 
 import { FaAngleLeft } from "react-icons/fa";
 
+import { parseDate } from "../utils/parseDate";
+
 function Graphs({ all, week, month, last }) {
   const [filter, setFilter] = useState("Todas");
   const [xDimension, setXDimension] = useState(0);
 
-  let data = all;
+  let data;
 
   const totalHospitalOcupation = [
     {
@@ -39,16 +41,16 @@ function Graphs({ all, week, month, last }) {
 
   switch (filter) {
     case "Todas":
-      data = all;
+      data = parseDate(all);
       break;
     case "Última semana":
-      data = week;
+      data = parseDate(week);
       break;
     case "Último mês":
-      data = month;
+      data = parseDate(month);
       break;
     default:
-      data = all;
+      data = parseDate(all);
       break;
   }
 
@@ -86,7 +88,7 @@ function Graphs({ all, week, month, last }) {
       <GraphsContainer>
         <Paper elevation={4} style={{ width: "90%", marginBottom: "8.5rem" }}>
           <Chart data={data}>
-            <ArgumentAxis showLabels={xDimension > 1490} />
+            <ArgumentAxis showLabels={xDimension > 1000} />
             <ValueAxis showGrid={true} showTicks={true} />
 
             <Legend />
@@ -94,13 +96,13 @@ function Graphs({ all, week, month, last }) {
             <BarSeries
               name="Casos ativos"
               valueField="total_active"
-              argumentField="dateupdate"
+              argumentField="date"
               color="#F7C335"
             />
             <BarSeries
               name="Óbitos"
               valueField="total_deaths"
-              argumentField="dateupdate"
+              argumentField="date"
               color="#F18685"
             />
 
@@ -117,20 +119,20 @@ function Graphs({ all, week, month, last }) {
         </Paper>
         <Paper elevation={4} style={{ width: "90%" }}>
           <Chart data={data}>
-            <ArgumentAxis showLabels={xDimension > 1490} />
+            <ArgumentAxis showLabels={xDimension > 1000} />
             <ValueAxis showGrid={true} showTicks={true} />
             <Legend />
 
             <LineSeries
               name="Confirmados"
               valueField="total_confirmed"
-              argumentField="dateupdate"
+              argumentField="date"
               color="#2D56A7"
             />
             <LineSeries
               name="Recuperados"
               valueField="total_recovered"
-              argumentField="dateupdate"
+              argumentField="date"
               color="#78B673"
             />
 
@@ -143,7 +145,7 @@ function Graphs({ all, week, month, last }) {
             <Animation duration={1500} />
           </Chart>
         </Paper>
-        <Paper elevation={4} style={{ width: "60%", margin: "8.5rem 0rem" }}>
+        <Paper elevation={4} style={{ width: "50%", margin: "8.5rem 0rem" }}>
           <Chart data={totalHospitalOcupation}>
             <PieSeries valueField="ocup" argumentField="name" />
 
