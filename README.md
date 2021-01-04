@@ -60,7 +60,7 @@ Also, the API and the website are very focused on my local region. So you can su
 <!-- BUILT WITH -->
 ### Built With
 
-* [Figma](https://www.figma.com/file/PmuSxLBoSK0VdLJ6TwecSB/cwb-covid-meter)
+* Figma [layout](https://www.figma.com/file/PmuSxLBoSK0VdLJ6TwecSB/cwb-covid-meter)
 * [NextJs](https://nextjs.org/)
 * [Styled Components](https://styled-components.com/)
 * [React Chart for Material-Ui](https://devexpress.github.io/devextreme-reactive/react/chart/)
