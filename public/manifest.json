@@ -1,5 +1,5 @@
 {
-  "short_name": "CWB COVID METER",
+  "short_name": "CWB COVID Meter",
   "name": "Curitiba COVID-19 Meter",
   "icons": [
     {
@@ -21,6 +21,6 @@
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "theme_color": "#FD7E40",
+  "theme_color": "#B85C2E",
   "background_color": "#3638AD"
 }

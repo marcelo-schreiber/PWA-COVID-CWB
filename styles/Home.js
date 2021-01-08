@@ -18,7 +18,7 @@ export const TitleLogo = styled.h1`
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `;
 
-export const Slogan = styled.h3`
+export const Slogan = styled.h2`
   font-weight: normal;
   font-size: 4.265rem;
   line-height: 5.5rem;
