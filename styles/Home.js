@@ -9,7 +9,7 @@ export const Header = styled.header`
 `;
 
 export const TitleLogo = styled.h1`
-  font-family: "Lobster", cursive;
+  font-family: "Lobster", "Avner", "Segoe Script", "Kunstler Script", cursive;
   font-size: 4.265rem;
   letter-spacing: 0.04em;
 
@@ -36,7 +36,7 @@ export const Slogan = styled.h3`
 
 export const Button = styled.button`
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  background: #fd7e40;
+  background-color: #b85c2e;
   border-radius: 15px;
 
   font-family: Montserrat;
@@ -59,8 +59,8 @@ export const Button = styled.button`
   position: relative;
 
   :hover {
-    background-color: #ca6533;
-    transform: scale(1.05);
+    background-color: #934a25;
+    transform: scale(1.04);
   }
 `;
 

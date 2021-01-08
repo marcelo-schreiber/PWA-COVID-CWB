@@ -13,7 +13,8 @@ function Home() {
     <Layout title="Home">
       <Header>
         <TitleLogo>Cwb Covid Meter</TitleLogo>
-        <a href="https://github.com/marcelo-schreiber" target="_blank" rel="noreferrer">
+
+        <a href="https://github.com/marcelo-schreiber" target="_blank" rel="noopener">
           <FaGithub size={64} color="#FFF" style={{ cursor: "pointer" }} />
         </a>
       </Header>
