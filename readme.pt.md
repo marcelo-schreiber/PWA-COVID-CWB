@@ -1,4 +1,3 @@
-
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Issues](https://img.shields.io/badge/Issues-0-red.svg)](https://github.com/marcelo-schreiber/Usage-CWB-covid-api/issues)
 
@@ -22,7 +21,6 @@
   </p>
 </p>
 
-
 <details open="open">
   <summary>Tabela de conteúdos</summary>
   <ol>
@@ -42,6 +40,7 @@
 </details>
 
 <!-- ABOUT THE PROJECT -->
+
 ## Sobre o projeto
 
 - Este projeto é somente um exemplo de como utilizar a API citada acima. Tenha certeza de checar ela.
@@ -57,14 +56,16 @@
 É claro que essa API e o website tem um foco em minha região. Então, você pode sugerir alterações dando um 'fork' e criando um PR ou abrindo um erro em 'issues'.
 
 <!-- BUILT WITH -->
+
 ### Tecnologias
 
-* Figma [layout](https://www.figma.com/file/PmuSxLBoSK0VdLJ6TwecSB/cwb-covid-meter)
-* [NextJs](https://nextjs.org/)
-* [Styled Components](https://styled-components.com/)
-* [React Chart for Material-Ui](https://devexpress.github.io/devextreme-reactive/react/chart/)
+- Figma [layout](https://www.figma.com/file/PmuSxLBoSK0VdLJ6TwecSB/cwb-covid-meter)
+- [NextJs](https://nextjs.org/)
+- [Styled Components](https://styled-components.com/)
+- [React Chart for Material-Ui](https://devexpress.github.io/devextreme-reactive/react/chart/)
 
 <!-- GETTING STARTED -->
+
 ## Começando
 
 Para funcionar na sua máquina você deve instalar <a href="https://yarnpkg.com/" target="_blank" rel="noreferrer">Yarn</a> e <a href="https://nodejs.org" target="_blank" rel="noreferrer">NodeJs</a>.
@@ -91,7 +92,7 @@ Distribuido sobre a Licença `MIT`. Veja LICENSE para mais informações.
 
 ## Contato
 
-- Discord: Losaeg#1619 
+- Discord: Losaeg#1619
 - Email: marcelorissette15@gmail.com
 
 ##### Feito com <3 por Marcelo Schreiber

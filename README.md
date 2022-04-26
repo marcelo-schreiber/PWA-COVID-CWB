@@ -1,4 +1,3 @@
-
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Issues](https://img.shields.io/badge/Issues-0-red.svg)](https://github.com/marcelo-schreiber/Usage-CWB-covid-api/issues)
 
@@ -22,7 +21,6 @@
   </p>
 </p>
 
-
 <details open="open">
   <summary>Table of Contents</summary>
   <ol>
@@ -42,10 +40,10 @@
 </details>
 
 <!-- ABOUT THE PROJECT -->
+
 ## About The Project
 
 - This is just a project prototype for the usage <a href="https://github.com/marcelo-schreiber/CWB-COVID-API" target="_blank" rel="noreferrer"> my API</a>. Make sure to check it out!
-
 
 ### Why NextJs?
 
@@ -58,15 +56,16 @@
 Also, the API and the website are very focused on my local region. So you can suggest changes by forking this repo and creating a pull request or opening an issue.
 
 <!-- BUILT WITH -->
+
 ### Built With
 
-* Figma [layout](https://www.figma.com/file/PmuSxLBoSK0VdLJ6TwecSB/cwb-covid-meter)
-* [NextJs](https://nextjs.org/)
-* [Styled Components](https://styled-components.com/)
-* [React Chart for Material-Ui](https://devexpress.github.io/devextreme-reactive/react/chart/)
-
+- Figma [layout](https://www.figma.com/file/PmuSxLBoSK0VdLJ6TwecSB/cwb-covid-meter)
+- [NextJs](https://nextjs.org/)
+- [Styled Components](https://styled-components.com/)
+- [React Chart for Material-Ui](https://devexpress.github.io/devextreme-reactive/react/chart/)
 
 <!-- GETTING STARTED -->
+
 ## Getting Started
 
 To run in your machine, make sure to have <a href="https://yarnpkg.com/" target="_blank" rel="noreferrer">Yarn</a> and <a href="https://nodejs.org" target="_blank" rel="noreferrer">NodeJs</a> installed.
@@ -93,8 +92,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-- Discord: Losaeg#1619 
+- Discord: Losaeg#1619
 - Email: marcelorissette15@gmail.com
-
 
 ##### Made with <3 by Marcelo Schreiber
