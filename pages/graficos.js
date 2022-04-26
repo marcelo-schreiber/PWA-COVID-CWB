@@ -1,39 +1,42 @@
-import React, { useState, useEffect } from "react";
-import Link from "next/link";
-
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 import {
-  ArgumentAxis,
-  ValueAxis,
-  Chart,
-  BarSeries,
-  LineSeries,
-  Title,
-  Legend,
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  CartesianGrid,
   Tooltip,
-} from "@devexpress/dx-react-chart-material-ui";
-import Paper from "@material-ui/core/Paper";
-import { EventTracker, HoverState, Stack, Animation } from "@devexpress/dx-react-chart";
+  Legend,
+  ResponsiveContainer,
+  AreaChart,
+  Area,
+} from 'recharts';
 
-import Layout from "../components/Layout";
-import { GraphsContainer, MainTitle, Selection, HeaderContainer } from "../styles/Graphs";
-import { parseData } from "../utils/parseData";
+import Layout from '../components/Layout';
+import {
+  GraphsContainer,
+  MainTitle,
+  Selection,
+  HeaderContainer,
+} from '../styles/Graphs';
+import { parseData } from '../utils/parseData';
 
-import { FaAngleLeft } from "react-icons/fa";
+import { FaAngleLeft } from 'react-icons/fa';
 
 function Graphs({ all, week, month, last }) {
-  const [filter, setFilter] = useState("Todas");
-  const [xDimension, setXDimension] = useState(0);
+  const [filter, setFilter] = useState('Todas');
 
   let data;
 
   switch (filter) {
-    case "Todas":
+    case 'Todas':
       data = parseData(all);
       break;
-    case "Última semana":
+    case 'Última semana':
       data = parseData(week);
       break;
-    case "Último mês":
+    case 'Último mês':
       data = parseData(month);
       break;
     default:
@@ -41,123 +44,107 @@ function Graphs({ all, week, month, last }) {
       break;
   }
 
-  const updateDimension = () => {
-    setXDimension(window.innerWidth);
-  };
-
-  useEffect(() => {
-    updateDimension();
-
-    window.addEventListener("resize", updateDimension);
-
-    return () => {
-      window.removeEventListener("resize", updateDimension);
-    };
-  }, []);
-
   return (
     <Layout title="Dados">
       <Link href="/" passHref={true}>
         <FaAngleLeft
           size={36}
           color="#fafafa"
-          style={{ position: "absolute", top: 5, left: 5, cursor: "pointer" }}
+          style={{ position: 'absolute', top: 5, left: 5, cursor: 'pointer' }}
         />
       </Link>
       <HeaderContainer>
         <MainTitle>Curitiba | Bandeira {last.flag} </MainTitle>
-        <Selection onChange={e => setFilter(e.target.value)} value={filter}>
+        <Selection onChange={(e) => setFilter(e.target.value)} value={filter}>
           <option>Todas</option>
           <option>Última semana</option>
           <option>Último mês</option>
         </Selection>
       </HeaderContainer>
       <GraphsContainer>
-        <Paper elevation={4} style={{ width: "90%", marginBottom: "8.5rem" }}>
-          <Chart data={data}>
-            <ArgumentAxis showLabels={xDimension > 830} />
-            <ValueAxis showGrid={true} showTicks={true} />
-
-            <Legend />
-
-            <BarSeries
-              name="Casos ativos"
-              valueField="total_active"
-              argumentField="date"
-              color="#F7C335"
-            />
-            <BarSeries
-              name="Óbitos"
-              valueField="total_deaths"
-              argumentField="date"
-              color="#F18685"
-            />
-
-            <EventTracker />
+        {/*
+  {
+    flag: 'amarela',
+    total_recovered: 287482,
+    total_active: 1695,
+    total_confirmed: 296929,
+    total_deaths: 7752,
+    avaliable_hospital_beds: 88,
+    date: '05/11',
+    ocupation: 47
+  },
+*/}
+        <ResponsiveContainer height={375} width="95%">
+          <LineChart data={data}>
+            <CartesianGrid strokeDasharray="2 2" />
+            <XAxis dataKey="date" />
+            <YAxis />
             <Tooltip />
-            <HoverState />
-
-            <Stack />
-
-            <Title text="Casos e Óbitos" />
-
-            <Animation duration={500} />
-          </Chart>
-        </Paper>
-        <Paper elevation={4} style={{ width: "90%" }}>
-          <Chart data={data}>
-            <ArgumentAxis showLabels={xDimension > 830} />
-            <ValueAxis showGrid={true} showTicks={true} />
             <Legend />
-
-            <LineSeries
-              name="Confirmados"
-              valueField="total_confirmed"
-              argumentField="date"
-              color="#3638AD"
+            <Line
+              type="monotone"
+              dataKey="total_active"
+              name="Casos Ativos"
+              stroke="#8884d8"
+              strokeWidth={2}
+              dot={false}
             />
-            <LineSeries
+          </LineChart>
+        </ResponsiveContainer>
+
+        <ResponsiveContainer height={375} width="95%">
+          <LineChart data={data}>
+            <CartesianGrid strokeDasharray="2 2" />
+            <XAxis dataKey="date" />
+            <YAxis />
+            <Tooltip />
+            <Legend />
+            <Line
+              type="monotone"
+              dataKey="total_recovered"
               name="Recuperados"
-              valueField="total_recovered"
-              argumentField="date"
-              color="#78B673"
+              stroke="#78B673"
+              strokeWidth={2}
+              dot={false}
             />
-
-            <Title text="Total de confirmados e recuperados" />
-
-            <EventTracker />
+            <Line
+              type="monotone"
+              dataKey="total_confirmed"
+              name="Confirmados"
+              stroke="#3638AD"
+              strokeWidth={2}
+              dot={false}
+            />
+            <Line
+              type="monotone"
+              dataKey="total_deaths"
+              name="Óbitos Total"
+              stroke="#F18685"
+              strokeWidth={2}
+              dot={false}
+            />
+          </LineChart>
+        </ResponsiveContainer>
+        <ResponsiveContainer height={375} width="95%">
+          <AreaChart data={data}>
+            <CartesianGrid strokeDasharray="2 2" />
+            <XAxis
+              dataKey="date"
+              scale="point"
+              padding={{ left: 10, right: 10 }}
+            />
+            <YAxis />
             <Tooltip />
-            <HoverState />
-
-            <Animation duration={1500} />
-          </Chart>
-        </Paper>
-        <Paper elevation={4} style={{ width: "90%", margin: "8.5rem 0rem" }}>
-          <Chart data={data}>
-            <ArgumentAxis showLabels={xDimension > 830} />
-            <ValueAxis showGrid={true} showTicks={true} />
-
             <Legend />
-
-            <BarSeries
+            <Area
+              type="monotone"
+              dataKey="ocupation"
               name="Ocupação leitos (%)"
-              valueField="ocupation"
-              argumentField="date"
-              color="#F18685"
+              stroke="#a95e5d"
+              fill="#F18685"
             />
-
-            <Title text="Ocupação dos leitos UTI (SUS)" />
-
-            <EventTracker />
-            <HoverState />
-
-            <Tooltip
-              contentComponent={props => <Tooltip.Content text={`${props.text}%`} />}
-            />
-
-            <Animation duration={2500} />
-          </Chart>
-        </Paper>
+          </AreaChart>
+        </ResponsiveContainer>
       </GraphsContainer>
     </Layout>
   );
@@ -165,7 +152,9 @@ function Graphs({ all, week, month, last }) {
 
 export async function getStaticProps() {
   const all = await fetch(`https://cwb-covid.herokuapp.com/api/all`);
-  const week = await fetch(`https://cwb-covid.herokuapp.com/api/filter?offset=0&limit=7`);
+  const week = await fetch(
+    `https://cwb-covid.herokuapp.com/api/filter?offset=0&limit=7`
+  );
   const month = await fetch(
     `https://cwb-covid.herokuapp.com/api/filter?offset=0&limit=30`
   );
