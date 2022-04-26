@@ -1,12 +1,18 @@
-import React from "react";
-import Image from "next/image";
-import Link from "next/link";
+import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 
-import { Header, TitleLogo, Slogan, Button, LandingContainer } from "../styles/Home";
+import {
+  Header,
+  TitleLogo,
+  Slogan,
+  Button,
+  LandingContainer,
+} from '../styles/Home';
 
-import Layout from "../components/Layout";
+import Layout from '../components/Layout';
 
-import { FaGithub } from "react-icons/fa";
+import { FaGithub } from 'react-icons/fa';
 
 function Home() {
   return (
@@ -14,8 +20,12 @@ function Home() {
       <Header>
         <TitleLogo>Cwb Covid Meter</TitleLogo>
 
-        <a href="https://github.com/marcelo-schreiber" target="_blank" rel="noopener">
-          <FaGithub size={64} color="#FFF" style={{ cursor: "pointer" }} />
+        <a
+          href="https://github.com/marcelo-schreiber"
+          target="_blank"
+          rel="noopener"
+        >
+          <FaGithub size={64} color="#FFF" style={{ cursor: 'pointer' }} />
         </a>
       </Header>
 
@@ -26,13 +36,7 @@ function Home() {
             <Button>Explorar</Button>
           </Link>
         </div>
-        <Image
-          src="/Landing.png"
-          alt="landing"
-          width={770}
-          height={803}
-          priority={true}
-        />
+        <Image src="/Landing.svg" alt="landing" width={770} height={803} />
       </LandingContainer>
     </Layout>
   );

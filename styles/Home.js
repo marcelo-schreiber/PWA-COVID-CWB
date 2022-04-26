@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Header = styled.header`
   display: flex;
@@ -9,9 +9,10 @@ export const Header = styled.header`
 `;
 
 export const TitleLogo = styled.h1`
-  font-family: "Lobster", "Avner", "Segoe Script", "Kunstler Script", cursive;
+  font-family: 'Lobster', 'Avner', 'Segoe Script', 'Kunstler Script', cursive;
   font-size: 4.265rem;
   letter-spacing: 0.04em;
+  font-weight: 400;
 
   color: #fafafa;
 
@@ -19,13 +20,13 @@ export const TitleLogo = styled.h1`
 `;
 
 export const Slogan = styled.h2`
-  font-weight: normal;
+  font-weight: 700;
   font-size: 4.265rem;
-  line-height: 5.5rem;
+  line-height: 117.9%;
 
   color: #fafafa;
 
-  margin-bottom: 4rem;
+  margin-bottom: 4.5rem;
 
   max-width: 42vw;
 
@@ -35,20 +36,16 @@ export const Slogan = styled.h2`
 `;
 
 export const Button = styled.button`
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  background-color: #b85c2e;
+  background-color: #fd7e40;
   border-radius: 15px;
 
   font-family: Montserrat;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 3.2rem;
-
-  letter-spacing: 0.1em;
+  font-weight: 700;
+  font-size: 3.5rem;
 
   border: none;
 
-  padding: 1.2rem 3.5rem;
+  padding: 1.5rem 5.8rem;
 
   color: #fafafafa;
 
@@ -59,8 +56,8 @@ export const Button = styled.button`
   position: relative;
 
   :hover {
-    background-color: #934a25;
-    transform: scale(1.04);
+    background-color: #a65329;
+    transform: scale(1.02);
   }
 `;
 

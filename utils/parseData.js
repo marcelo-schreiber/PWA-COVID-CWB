@@ -1,9 +1,9 @@
-export const parseData = arr => {
+export const parseData = (arr) => {
   try {
-    arr.forEach(item => {
-      const [_, month, day] = item.dateupdate.split("-");
+    arr.forEach((item) => {
+      const [_, month, day] = item.dateupdate.split('-');
       item.date = `${day}/${month}`;
-      item.ocupation = parseInt(item.hospital_ocupation.replace("%", ""));
+      item.ocupation = parseInt(item.hospital_ocupation.replace('%', ''));
       delete item.dateupdate;
       delete item.hospital_ocupation;
     });
